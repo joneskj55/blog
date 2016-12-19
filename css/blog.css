@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
 body {
     background-color: white;
     color: black;
@@ -38,7 +39,7 @@ h3 {
 }
 
 /*#blog-date {*/
-    /*color: #337ab7;*/
+/*color: #337ab7;*/
 /*}*/
 
 #post {
