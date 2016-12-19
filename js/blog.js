@@ -1,6 +1,5 @@
-/**
- * Created by kevinjones on 12/16/16.
- */
+//Created by kevinjones on 12/16/16.//
+
 "use strict";
 
 $(document).ready(function () {
