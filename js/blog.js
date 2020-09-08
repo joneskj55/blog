@@ -3,9 +3,9 @@
 "use strict";
 
 $(document).ready(function () {
-    var blogPosts = $.get("data/blog.json");
-    var posts = [];
-    var newPosts = [];
+    const blogPosts = $.get("data/blog.json");
+    let posts = [];
+    let newPosts = [];
     blogPosts.done(function (data) {
 
         data.forEach(function (value) {
@@ -13,7 +13,7 @@ $(document).ready(function () {
                 + "<h3 id='blog-title'>" + value.title + "</h3>"
                 + "<p id='blog-content'>" + value.content + "</p>"
                 + "<p id='blog-date'>" + value.date + "</p>"
-//              + "<p id='blog-categories'>" + "Categories: " + value.categories.join(", ") + "</p>"
+                //              + "<p id='blog-categories'>" + "Categories: " + value.categories.join(", ") + "</p>"
                 + "<button id='remove-post' class='btn btn-xl del'>Delete Post</button>"
                 + "</div>";
             $("#posts").html(posts);
@@ -22,11 +22,11 @@ $(document).ready(function () {
         posts = [];
     });
 
-    //------ADD POST FUNCTION--------//
+    //------ADD POST--------//
     console.log(newPosts);
 
     $(".btn").click(function () {
-        var newData = {
+        let newData = {
             title: $("#name").val(),
             content: $("#blog-title").val(),
             date: $("#post").val()
@@ -47,7 +47,7 @@ $(document).ready(function () {
         clear();
     });
 
-    //-------REMOVE POST FUNCTION--------//
+    //-------REMOVE POST--------//
     $("body").delegate(".del", "click", function () {
         $(this).parent().addClass("hidden");
     });
